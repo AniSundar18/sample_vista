@@ -255,23 +255,24 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            VisTA is a reinforcement learning framework that trains visual AI agents to intelligently explore, select, and combine tools from a diverse library based on performance feedback. 
+            Unlike existing approaches that either rely on fixed prompting or require extensive fine-tuning and human supervision, VisTA learns tool-selection strategies through trial and error, using task outcomes to improve over time. 
+            It leverages a method called Group Relative Policy Optimization (GRPO) to guide this learning without needing explicit reasoning supervision. 
+            Experiments show that VisTA outperforms traditional baselines, especially on unfamiliar tasks, making it a flexible and adaptive solution for visual reasoning.
           </p>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/teaser.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+
+          
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            The above image shows some of the features of our work.
           </p>
           <p>
             We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
