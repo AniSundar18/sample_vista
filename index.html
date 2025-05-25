@@ -302,35 +302,48 @@
   <h2 class="title is-4">Agent uses appropriate tools during inference</h2>
 </div>
 
-<!-- Carousel Container -->
-<div style="position: relative; overflow: hidden;">
-  <!-- Scrollable content -->
-  <div id="carousel-track" style="display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 2rem;">
-    <div style="flex: 0 0 75%; text-align: center;">
-      <img src="./static/images/chart_viz.png" style="width: 100%; height: auto;" alt="ChartQA"/>
-      <p class="is-bold">ChartQA</p>
-    </div>
-    <div style="flex: 0 0 75%; text-align: center;">
-      <img src="./static/images/geom_viz.png" style="width: 100%; height: auto;" alt="Geometry3k"/>
-      <p class="is-bold">Geometry3k</p>
-    </div>
+<!-- Carousel Wrapper -->
+<div style="position: relative; width: 75%; margin: auto; text-align: center;">
+  
+  <!-- Image Container -->
+  <div id="carousel-images">
+    <img src="./static/images/chart_viz.png" style="width: 100%; height: auto;" alt="ChartQA" />
+    <p class="is-bold">ChartQA</p>
   </div>
 
-  <!-- Left Button -->
-  <button onclick="scrollCarousel(-1)" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: white; border: none; font-size: 2rem; cursor: pointer;">&#8592;</button>
+  <!-- Left Arrow -->
+  <button onclick="changeImage(-1)" style="position: absolute; top: 50%; left: -2rem; transform: translateY(-50%); background: none; border: none; font-size: 2rem; cursor: pointer;">&#8592;</button>
 
-  <!-- Right Button -->
-  <button onclick="scrollCarousel(1)" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: white; border: none; font-size: 2rem; cursor: pointer;">&#8594;</button>
+  <!-- Right Arrow -->
+  <button onclick="changeImage(1)" style="position: absolute; top: 50%; right: -2rem; transform: translateY(-50%); background: none; border: none; font-size: 2rem; cursor: pointer;">&#8594;</button>
 </div>
 
-<!-- JS Scroll Logic -->
 <script>
-  function scrollCarousel(direction) {
-    const track = document.getElementById('carousel-track');
-    const scrollAmount = track.clientWidth * 0.75; // Scroll by one image width
-    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  const images = [
+    {
+      src: "./static/images/chart_viz.png",
+      alt: "ChartQA",
+      label: "ChartQA"
+    },
+    {
+      src: "./static/images/geom_viz.png",
+      alt: "Geometry3k",
+      label: "Geometry3k"
+    }
+  ];
+
+  let currentIndex = 0;
+
+  function changeImage(direction) {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    const imageContainer = document.getElementById("carousel-images");
+    imageContainer.innerHTML = `
+      <img src="${images[currentIndex].src}" style="width: 100%; height: auto;" alt="${images[currentIndex].alt}" />
+      <p class="is-bold">${images[currentIndex].label}</p>
+    `;
   }
 </script>
+
 
       
       <!-- Paragraph Below Images -->
