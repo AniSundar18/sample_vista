@@ -260,7 +260,7 @@
           <p>
             VisTA is a reinforcement learning framework that trains visual AI agents to intelligently explore, select, and combine tools from a diverse library based on performance feedback. 
             Unlike existing approaches that either rely on fixed prompting or require extensive fine-tuning and human supervision, VisTA learns tool-selection strategies through trial and error, using task outcomes to improve over time. 
-            It leverages a method called Group Relative Policy Optimization (GRPO) to guide this learning without needing explicit reasoning supervision. 
+            It leverages Group Relative Policy Optimization (GRPO) to guide this learning without needing explicit reasoning supervision. 
             Experiments show that VisTA outperforms traditional baselines, especially on unfamiliar tasks, making it a flexible and adaptive solution for visual reasoning.
           </p>
           <div class="column has-text-centered">
@@ -272,18 +272,8 @@
 
           
           <p>
-            The above image shows some of the features of our work.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            The image above highlights key capabilities of our approach. As shown on the left, our method learns to combine multiple tools relevant to the task—without requiring any human demonstrations. 
+            Since our framework is independent of the underlying reasoner model, the trained agent (policy) can be seamlessly integrated to guide tool selection for any reasoner.
           </p>
         </div>
       </div>
