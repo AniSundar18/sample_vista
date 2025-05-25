@@ -299,19 +299,19 @@
   <div class="container is-max-desktop">
 
     <div class="column has-text-centered">
-      <h2 class="title is-4">Performance on Chart Understanding and Plane Geometry</h2>
+      <h2 class="title is-4">Qualitative Examples</h2>
     </div>
   
     <!-- Visual Effects -->
     <div class="columns">
       <div class="column is-half has-text-centered">
-        <img src="./static/images/qwen-r.png" class="interpolation-image is-fullwidth" alt="Qwen-based reasoner"/>
-        <p class="is-bold">Qwen-based Reasoner</p>
+        <img src="./static/images/chart_viz.png" class="interpolation-image is-fullwidth" alt="Qwen-based reasoner"/>
+        <p class="is-bold">ChartQA</p>
       </div>
       
       <div class="column is-half has-text-centered">
-        <img src="./static/images/gpt-r.png" class="interpolation-image is-fullwidth" alt="GPT-4o reasoner"/>
-        <p class="is-bold">GPT-4o Reasoner</p>
+        <img src="./static/images/geom_viz.png" class="interpolation-image is-fullwidth" alt="GPT-4o reasoner"/>
+        <p class="is-bold">Geometry3k</p>
       </div>
     </div>
       
@@ -337,8 +337,7 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              We observe that our method achieves SOTA performance on both ChartQA and Geometry3k. 
-            The agent trained with the Qwen-based reasoner (left) can be effortlessly integrated with alternative reasoners like GPT-4o, as shown on the right.
+              VisTA-trained agents are able to call the appropriate tools based on the question.
             </p>
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/matting.mp4"
