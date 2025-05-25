@@ -281,7 +281,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+<!--     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -289,7 +289,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -301,19 +301,28 @@
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <img src="./static/images/qwen-r.png" class="interpolation-image is-fullwidth" alt="Interpolation end reference image."/>
+          <p class="is-bold"></p>
+        </div>
+      
+        <div class="column has-text-centered">
+          <img src="./static/images/gpt-r.png" class="interpolation-image is-fullwidth" alt="Second Image"/>
+          <p class="is-bold"></p>
         </div>
       </div>
+      
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Performance on Chart Understanding and Plane Geometry</h2>
+          <p>
+            "We observe that our method achieves SOTA performance on both ChartQA and Geometry3k. 
+            The agent trained with the Qwen-based reasoner (left) can be effortlessly integrated with alternative reasoners like GPT-4o, as shown on the right.
+          </p>
+        </div>
+      </div>
+
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
